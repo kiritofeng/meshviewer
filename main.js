@@ -43,7 +43,7 @@ function createWindow()
                                     extensions: ['obj', 'fbx', 'gltf', 'glb', 'jpg', 'jpeg', 'png']
                                 },
                                 {
-                                    name: 'OBJ File with MTL',
+                                    name: 'OBJ File',
                                     extensions: ['obj']
                                 },
                                 {

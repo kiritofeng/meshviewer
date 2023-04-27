@@ -104,9 +104,15 @@ function renderFile(file, extension)
                         return;
                     });
                 }, undefined, (e) => {
-                    alert("Failed to load MTL file " + mtl);
-                    console.log(e);
-                    return;
+                    new THREE.OBJLoader().load(file, (obj) => {
+                        obj.position.set(0, 0, 0);
+                        renderObject(obj);
+                        setStatus(file);
+                    }, undefined, (e) => {
+                        alert("Failed to load OBJ file " + file);
+                        console.log(e);
+                        return;
+                    });
                 });
             break;
             case "FBX":
@@ -186,7 +192,7 @@ function renderObject(object)
     fixMaterials(object);
     scene.add(object);
     cameraToObject(object);
-    
+
     renderer.render(scene, camera);
 }
 
