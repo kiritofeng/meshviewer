@@ -44,7 +44,8 @@
     "linux": {
       "target": [
         "AppImage",
-        "deb"
+        "deb",
+        "pacman"
       ],
       "category": "Graphics;3DGraphics;Utility",
       "desktop": {
@@ -61,7 +62,7 @@
       },
       {
         "ext": "obj",
-        "name": "OBJ (+MTL) File",
+        "name": "OBJ File",
         "role": "Viewer"
       },
       {
